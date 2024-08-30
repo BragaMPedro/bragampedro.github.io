@@ -1,0 +1,8 @@
+❖ Sobre mim: que fale sobre você, hobbies etc;
+❖ Formação: educacional, idiomas;
+❖ Contato – form(nome, email, mensagem)
+❖ Comentar código;
+❖ Portfólio:
+  - Pode colocar links para outros sites que você
+  tenha feito, ou com trabalhos que você tenha desenvolvido no curso em
+  outras disciplinas.

@@ -1,0 +1,78 @@
+.form-border {
+   height: fit-content;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   border: 3px solid var(--cor-primaria);
+   border-radius: 1rem;
+}
+
+.form {
+   max-width: 27rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
+
+   padding: 1.25rem;
+   gap: 1rem;
+}
+
+section > input,
+section > textarea,
+.form,
+.form-border,
+.select-container,
+#radio-select {
+   width: 100%;
+}
+
+section {
+   flex: 1 1;
+   width: 100%;
+}
+
+section > label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+select {
+   width: 100%;
+   margin-right: 5%;
+}
+
+textarea {
+   min-height: 80px;
+   resize: vertical;
+}
+
+.select-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+#radio-select {
+   display: inline-flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+section#action-section{
+   display: flex;
+   justify-content: center;
+}
+
+
+@media (min-width: 640px) {
+   textarea {
+      max-width: 100%;
+   }
+
+   section#action-section{
+      justify-content: flex-end;
+   }
+}

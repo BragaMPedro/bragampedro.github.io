@@ -1,56 +1,23 @@
+/**
+ *Recolhe dados do formulário e mostra um prompt de confirmação
+ * @param {Event} e objeto evento vindo do Form Input
+ */
 function handleSubmit(e) {
    e.preventDefault();
    let formData = new FormData(e.currentTarget);
 
    let nome = formData.get("nome");
-   let genero = formData.get("genero");
-   let raca = formData.get("raca");
-   let classe = formData.get("classe");
-   let historia = formData.get("historia");
+   let email = formData.get("email");
+   let assunto = formData.get("assunto");
+   let mensagem = formData.get("mensagem");
 
    confirm(
       `Confirme suas informações:\n
       ${nome}
-      ${genero === "m" ? "Masculino" : genero === "f" ? "Femenino" : "Sem gênero pra mim, obrigado"}
-      ${titlefyValue(raca)}
-      ${titlefyValue(classe)}
-      ${encurtaTexto(historia)}`
+      ${email}
+      ${assunto}
+      ${encurtaTexto(mensagem)}`
    );
-}
-
-function racaAleatoria() {
-   let races = document.getElementById("raca");
-   let racescount = 25;
-   let racesArray = [];
-
-   for (let i = 0; i < racescount; i++) {
-      const el = races[i];
-      racesArray.push(el.value);
-   }
-
-   let randomIndex = Math.floor(Math.random() * racesArray.length);
-
-   selectValue("raca", racesArray[randomIndex]);
-}
-
-function classeAleatoria() {
-   let classes = document.getElementById("classe");
-   let classesArray = classes.textContent.match(/\S+/gm); //regex 101
-   let randomIndex = Math.floor(Math.random() * classesArray.length);
-
-   selectValue("classe", classesArray[randomIndex]);
-}
-
-/**
- * Seleciona o atributo value de um elemento HTML
- *
- * @param {string} id ID do elemento que deseja atribuir valor
- * @param {string} value String value que deseja atribuir ao elemento
- */
-function selectValue(id, value) {
-   let selectedElement = document.getElementById(id);
-
-   selectedElement.value = value.toLowerCase();
 }
 
 /**
@@ -67,30 +34,10 @@ function encurtaTexto(texto, length = 25) {
 }
 
 /**
- *Capitaliza e substituí todos os "-" por espaços " " da String value
- * @param {string} value
- * @returns {string} 
+ *Recebe uma `string` como parâmetro e retorna essa mesma string capitalizada
+ * @param {string} string a ser capitalizada
+ * @returns {string} `string` capitalizada (com a primeira letra maiúscula)
  */
-function titlefyValue(value) {
-   let titlefiedValue = "";
-   let multiPalavra = value.includes("-");
-
-   if (multiPalavra) {
-      let valueArray = value.split("-");
-
-      for (const word of valueArray) {
-         let capitalizedWord = capitalize(word);
-
-         titlefiedValue.concat(capitalizedWord + " ");
-      }
-   } else {
-      titlefiedValue = capitalize(value);
-   }
-   titlefiedValue.trimEnd();
-
-   return titlefiedValue;
-}
-
 function capitalize(string){
    let capitalizedString = string.replace(string.charAt(0), string.charAt(0).toUpperCase());
 

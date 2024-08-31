@@ -66,8 +66,39 @@
             </div>
          </section>
          <section id="formacao" class="container main-padding">
-            <h2>Formação</h2>
-            <p>Meu curriculo aqui</p>
+            <h2>Formação e experiência</h2>
+            <br />
+            <ul style="list-style-type: disc">
+               <li>
+                  <h4>Desenvolvedor Frontend</h4>
+                  <ul style="list-style-type: square">
+                     <li>
+                        <p>
+                           Aplicações de exemplo para aulas de frontend com as stacks React Native, Javascript Vanilla,
+                           e React.Js
+                        </p>
+                     </li>
+                     <li style="list-style-type: square">
+                        <p>
+                           Desenvolvimento de aplicativo web usando as stacks React.js, Next, TypeScript, e TailwindCSS.
+                        </p>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <h4>Projetos Pessoais</h4>
+                  <ul style="list-style-position: inside; list-style-type: circle">
+                     <li>
+                        Criação de diversos Projetos em ReactJs , React Native e Figma com o objetivo de praticar
+                        habilidades específicas, ou melhorar a qualidade de vida através da funcionalidade dos app.
+                     </li>
+                     <li style="list-style-type: circle">
+                        Desenvolvimento através do Google AI Studio e Gemini API de chat bot baseado em instruções,
+                        implementando few-shot framework e integrando-o com um aplicativo da web React/Next.
+                     </li>
+                  </ul>
+               </li>
+            </ul>
          </section>
          <section id="projetos" class="projetos-bg">
             <div class="backdrop-blur-alt">
@@ -243,6 +274,9 @@
       </footer>
 
       <script>
+         /**
+          *Ativa e desativa menu colapsável
+          **/
          function toggleCollapsableMenu() {
             const nav = document.querySelector(".nav-list");
             nav.classList.toggle("show-nav-list");

@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="index.css" />
-      <link rel="stylesheet" href="form.css" />
+      <link rel="stylesheet" href="/form/form.css" />
       <link rel="stylesheet" href="/global/reset.css" />
       <link rel="stylesheet" href="/global/base.css" />
       <link rel="stylesheet" href="/global/navbar.css" />
@@ -67,32 +67,27 @@
          </section>
          <section id="formacao" class="container main-padding">
             <h2>Formação e experiência</h2>
-            <br />
-            <ul style="list-style-type: disc">
-               <li>
-                  <h4>Desenvolvedor Frontend</h4>
-                  <ul style="list-style-type: square">
+            <ul>
+               <li class="formacao-nested_list_container">
+                  <h3>Desenvolvedor Frontend</h3>
+                  <ul class="formacao-nested_list">
                      <li>
-                        <p>
-                           Aplicações de exemplo para aulas de frontend com as stacks React Native, Javascript Vanilla,
-                           e React.Js
-                        </p>
+                        Aplicações de exemplo para aulas de frontend com as stacks React Native, Javascript Vanilla, e
+                        React.Js
                      </li>
-                     <li style="list-style-type: square">
-                        <p>
-                           Desenvolvimento de aplicativo web usando as stacks React.js, Next, TypeScript, e TailwindCSS.
-                        </p>
+                     <li>
+                        Desenvolvimento de aplicativo web usando as stacks React.js, Next, TypeScript, e TailwindCSS.
                      </li>
                   </ul>
                </li>
-               <li>
-                  <h4>Projetos Pessoais</h4>
-                  <ul style="list-style-position: inside; list-style-type: circle">
+               <li class="formacao-nested_list_container">
+                  <h3>Projetos Pessoais</h3>
+                  <ul class="formacao-nested_list">
                      <li>
                         Criação de diversos Projetos em ReactJs , React Native e Figma com o objetivo de praticar
                         habilidades específicas, ou melhorar a qualidade de vida através da funcionalidade dos app.
                      </li>
-                     <li style="list-style-type: circle">
+                     <li>
                         Desenvolvimento através do Google AI Studio e Gemini API de chat bot baseado em instruções,
                         implementando few-shot framework e integrando-o com um aplicativo da web React/Next.
                      </li>
@@ -282,6 +277,6 @@
             nav.classList.toggle("show-nav-list");
          }
       </script>
-      <script src="/ficha-form.js"></script>
+      <script src="/form/form.js"></script>
    </body>
 </html>
